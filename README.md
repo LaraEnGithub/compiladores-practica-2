@@ -12,24 +12,18 @@ compilers_lab/regex_to_nfa/
 ```
 
 ## Uso
-
-...
+```
+./build/regex_to_nfa -r
+```
 
 ## Compilar y correr localmente
 
 ```bash
-cd compilers_lab/regex_to_nfa
+cd compilers_lab/nfa_to_dfa
 cmake -S . -B build
 cmake --build build
 ./build/regex_to_nfa -r
 ```
 
-## Validar con Docker
-
-```bash
-cd compilers_lab/regex_to_nfa
-docker build -t regex_to_nfa_validator .
-docker run --rm regex_to_nfa_validator
-```
 
 
