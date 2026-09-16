@@ -36,5 +36,6 @@ bool save_nfa(const Nfa &n, const std::string &path);
 bool load_nfa(const std::string &path, Nfa &out);
 void free_nfa(Nfa &n);
 void epsilon_closure(const Nfa &n, std::set<int> &states);
+std::set<int> move(const Nfa &n, const std::set<int> &states, char symbol);
 
 #endif

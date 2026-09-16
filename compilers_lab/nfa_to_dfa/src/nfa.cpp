@@ -13,16 +13,7 @@ bool match_nfa(const Nfa &n, const std::string &input)
 
     for (char c : input)
     {
-        std::set<int> new_states;
-
-        for (int s : visited_states)
-        {
-            for (const Transition &t : n.states[s].transitions)
-            {
-                if (t.symbol == c)
-                    new_states.insert(t.to);
-            }
-        }
+        std::set<int> new_states = move(n, visited_states, c);
 
         if (new_states.empty())
             return false;
@@ -322,4 +313,20 @@ bool load_nfa(const std::string &path, Nfa &out)
     }
 
     return true;
+}
+
+// Algoritmo 1- práctica2, move
+// nfa.cpp
+std::set<int> move(const Nfa &n, const std::set<int> &states, char symbol)
+{
+    std::set<int> result;
+    for (int s : states)
+    {
+        for (const Transition &t : n.states[s].transitions)
+        {
+            if (t.symbol == symbol)
+                result.insert(t.to);
+        }
+    }
+    return result;
 }
