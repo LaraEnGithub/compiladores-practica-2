@@ -116,7 +116,7 @@ void test_epsilon_closure_hybrid(){
 
 int main() {   
     std::cout << "========== VALIDATION ==========\n";
-    
+
     test_epsilon_closure_empty();
     std::cout << "[OK] test_epsilon_closure_empty\n";
 
