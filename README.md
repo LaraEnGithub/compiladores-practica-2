@@ -1,14 +1,15 @@
 ## Estructura del proyecto
 
 ```
-compilers_lab/regex_to_nfa/
+compilers_lab/nfa_to_dfa/
 ├── src/
 │   ├── main.cpp
 │   ├── regex.hpp/.cpp
-│   └── nfa.hpp/.cpp
-├── CMakeLists.txt
-├── Dockerfile
-└── validator
+│   ├── nfa.hpp/.cpp
+│   └── dfa.hpp/.cpp
+├── tests/
+│   └── test_subset_construction.cpp
+└── CMakeLists.txt
 ```
 
 ## Uso
