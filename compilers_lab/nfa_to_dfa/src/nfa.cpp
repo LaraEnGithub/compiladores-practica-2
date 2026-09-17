@@ -74,6 +74,8 @@ void free_nfa(Nfa &n)
     n.accept_state = -1;
 }
 
+// Algoritmo 2- práctica2, epsilon_closure
+// nfa.cpp
 void epsilon_closure(const Nfa &n, std::set<int> &states)
 {
     std::stack<int> s;
