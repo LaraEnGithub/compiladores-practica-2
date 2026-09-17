@@ -8,4 +8,5 @@ add_executable(regex_to_nfa
     ./src/main.cpp
     ./src/nfa.cpp
     ./src/regex.cpp
+    ./src/dfa.cpp
 )
