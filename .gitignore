@@ -70,3 +70,8 @@ Testing/
 
 compilers_lab/regex_to_nfa/regex_to_nfa
 *.nfa
+
+# Binarios y exports sueltos de nfa_to_dfa (quedan en src/ al compilar/probar a mano)
+compilers_lab/nfa_to_dfa/src/nfa
+compilers_lab/nfa_to_dfa/test_subset
+*.json
