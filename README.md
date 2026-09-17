@@ -8,6 +8,7 @@ compilers_lab/nfa_to_dfa/
 │   ├── nfa.hpp/.cpp
 │   └── dfa.hpp/.cpp
 ├── tests/
+│   └── test_epsilon_closure.cpp
 │   └── test_subset_construction.cpp
 └── CMakeLists.txt
 ```
@@ -27,21 +28,15 @@ cmake --build build
 ```
 
 ## Correr las pruebas
-Para compilar, por ejemplo,  la prueba de construcción de subconjuntos (NFA a DFA):
-
 ```bash
-g++ -std=c++17 -Wall -Wextra \
-    tests/test_subset_construction.cpp \
-    src/dfa.cpp \
-    src/nfa.cpp \
-    src/regex.cpp \
-    -o test_subset
+cd build
+ctest --output-on-failure
 ```
 
-Una vez compilada, ejecutar con:
-
+Para ejecutar las pruebas de forma individual:
 ```bash
-./test_subset
+./build/test_subset
+./build/test_e_closure
 ```
 
 
